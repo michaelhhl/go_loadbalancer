@@ -1,0 +1,17 @@
+#service_name: timeservice
+lb_type: file
+
+#if lb_type==file
+lb_hosts:
+  - "192.168.23.130"
+  - "192.168.23.131"
+  - "192.168.23.132"
+
+lb_port: 8029
+#random/round/weight
+lb_algorithm: round
+
+local_host_port: 127.0.0.1:8000
+#if lb_type==consul
+#lb_type: consul
+#lb_hosts: "consul server: port"
